@@ -16,7 +16,7 @@ function rootReducer(state=initState,action){
        }
    }
    else if(action.type === "ADD_POST"){
-       var id = Math.random()*10
+       var id = state.posts.length+1
        var post = {
            id,
            title : action.post.title,
